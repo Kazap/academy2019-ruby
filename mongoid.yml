@@ -1,0 +1,6 @@
+development:
+  clients:
+    default:
+      database: ninjagram
+      hosts:
+        - mongo:27017

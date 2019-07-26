@@ -1,13 +1,10 @@
+require 'mongoid'
+
 class Comment
-  attr_accessor :author, :content, :created_at
+  include Mongoid::Document
+  include Mongoid::Timestamps
 
-  def initialize(params = {})
-    self.author = params[:author]
-    self.content = params[:content]
-    self.created_at = Time.new
-  end
-
-  def to_s
-    "#{author || 'ANONIMO'} comentou: #{content} - às #{created_at}"
-  end
+  field :author, type: String
+  field :content, type: String
+  embedded_in :post
 end
