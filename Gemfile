@@ -6,8 +6,8 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem "sinatra", "~> 2.0"
+gem "sinatra", "~> 3.0"
 
 gem "mongoid", "~> 7.0"
 
-gem "sinatra-contrib", "~> 2.0"
+gem "sinatra-contrib", "~> 3.0"
